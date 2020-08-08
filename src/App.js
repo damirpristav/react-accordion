@@ -28,7 +28,7 @@ const App = () => {
     <Fragment>
       <Header title="React JS accordions" />
       <div className="container">
-        <Accordions data={accordionData} duration={2000} opened={2} />
+        <Accordions data={accordionData} duration={400} opened={0} />
       </div>
     </Fragment>
   );
