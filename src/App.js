@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Fragment } from 'react';
 import './App.css';
 
-function App() {
+import Header from './components/Header';
+import Accordions from './components/Accordions';
+
+const accordionData = [
+  {
+    question: 'Lorem ipsum dolor sit amet 1 ?',
+    answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vero quos doloremque eum quam dolorem.'
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet 2 ?',
+    answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vero quos doloremque eum quam dolorem inventore minus ad. Molestias, minima! Doloribus, vero quos doloremque.'
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet 3 ?',
+    answer: 'Doloribus, vero quos doloremque eum quam dolorem inventore minus ad. Molestias, minima!'
+  },
+  {
+    question: 'Lorem ipsum dolor sit amet 4 ?',
+    answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, vero quos doloremque eum quam dolorem inventore minus ad. Molestias, minima!'
+  }
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header title="React JS accordions" />
+      <div className="container">
+        <Accordions data={accordionData} duration={2000} opened={2} />
+      </div>
+    </Fragment>
   );
 }
 
